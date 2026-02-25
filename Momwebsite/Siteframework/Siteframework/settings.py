@@ -29,7 +29,7 @@ SECRET_KEY = os.getenv("SecretKey_danajo")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-ALLOWED_HOSTS = [os.getenv("Ip_ws"),'localhost']
+ALLOWED_HOSTS = [os.getenv("Ip_ws"),'localhost',"127.0.0.1"]
 
 
 # Application definition
@@ -127,4 +127,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
+import os 
+STATIC_ROOT=os.path.join(BASE_DIR,'static/')
 STATIC_URL = 'static/'
