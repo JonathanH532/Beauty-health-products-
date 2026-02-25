@@ -29,7 +29,7 @@ SECRET_KEY = os.getenv("SecretKey_danajo")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [os.getenv("Ip_ws"),'localhost']
 
 
 # Application definition
@@ -80,12 +80,12 @@ WSGI_APPLICATION = 'Siteframework.wsgi.application'
 
 DATABASES = {
     'default':{
-        'ENGINE': 'django.db.backends.postgresql_psycog2',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': os.getenv('Name_db'),
         'USER': os.getenv("User_db"),
         'PASSWORD':os.getenv("Password_db"),
         'HOST':os.getenv("Localhost_db"),
-        'PORT': ''
+        'PORT': os.getenv("Port_db")
 
 
     }
