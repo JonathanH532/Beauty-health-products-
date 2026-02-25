@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 from pathlib import Path
 import os 
 from dotenv import load_dotenv
+import dj_database_url
 
 load_dotenv()
 
@@ -28,7 +29,6 @@ SECRET_KEY = os.getenv("SecretKey_danajo")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-os.getenv("DB_host")
 ALLOWED_HOSTS = []
 
 
@@ -76,12 +76,21 @@ WSGI_APPLICATION = 'Siteframework.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
+
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    'default':{
+        'ENGINE': 'django.db.backends.postgresql_psycog2',
+        'NAME': os.getenv('Name_db'),
+        'USER': os.getenv("User_db"),
+        'PASSWORD':os.getenv("Password_db"),
+        'HOST':os.getenv("Localhost_db"),
+        'PORT': ''
+
+
     }
 }
+
 
 
 # Password validation
