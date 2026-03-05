@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Beauty & Shine - Shampoo & More</title>
+  <meta name="description" content="Premium beauty products including shampoos, conditioners, and more. Shop now for free shipping on orders over $50.">
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Minimal in-file CSS for a quick start. Move to a separate CSS file for production. */
+    :root {
+      --brand: #7c3aed;
+      --brand-dark: #5b21b6;
+      --bg: #f7f5f8;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --card: #ffffff;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial; color: var(--text); background: var(--bg); }
+    header { background: #fff; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 1000; }
+    .container { width: 92%; max-width: 1100px; margin: 0 auto; }
+    nav { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; }
+    .logo { font-weight: 700; font-size: 1.2rem; color: var(--brand); text-decoration: none; }
+    .nav-links { display: flex; gap: 16px; }
+    .nav-links a { text-decoration: none; color: #374151; padding: 8px 12px; border-radius: 6px; }
+    .nav-links a:hover { background: #f1f5f9; }
+    .hero { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 28px; align-items: center; padding: 40px 0; }
+    .hero h1 { font-size: 2.4rem; line-height: 1.15; margin: 0 0 12px; }
+    .hero p { color: var(--muted); margin: 8px 0 18px; }
+    .cta { display: inline-block; padding: 12px 20px; background: var(--brand); color: #fff; text-decoration: none; border-radius: 6px; }
+    .hero-art { width: 100%; height: 100%; background: #fff; border: 1px solid #eee; display: flex; align-items: center; justify-content: center; padding: 20px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 18px; padding: 20px 0; }
+    .card { background: var(--card); border: 1px solid #eee; border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; }
+    .card img { width: 100%; height: 180px; object-fit: cover; }
+    .card-body { padding: 12px; display: flex; flex-direction: column; gap: 6px; }
+    .tag { display: inline-block; padding: 4px 8px; background: #f3f4f6; border-radius: 999px; font-size: 12px; color: #374151; align-self: flex-start; }
+    .price { font-weight: 700; color: var(--brand); }
+    .btn { padding: 10px 12px; background: #111; color: #fff; border: none; border-radius: 6px; cursor: pointer; text-align: center; text-decoration: none; }
+    .btn.secondary { background: #f3f4f6; color: #111; }
+    footer { border-top: 1px solid #eee; padding: 20px 0; margin-top: 40px; color: var(--muted); font-size: 14px; }
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; padding: 20px 0; }
+      .hero-art { order: -1; height: 220px; background: #fff; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav aria-label="Main navigation">
+        <a href="#" class="logo">Beauty & Shine</a>
+        <div class="nav-links">
+          <a href="#shop">Shop</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="container hero" aria-label="Hero section">
+      <div>
+        <span class="tag" style="margin-bottom:6px; display:inline-block;">New Season</span>
+        <h1>Shampoo that nourishes, refreshes, and leaves you feeling radiant</h1>
+        <p>Your go-to destination for premium hair care. Clean formulas, gentle on scalp, and great for all hair types.</p>
+        <a href="#shop" class="cta">Shop All Shampoos</a>
+      </div>
+      <div class="hero-art" aria-label="Hero product image">
+        <!-- Placeholder image; replace with your asset -->
+        <img src="https://via.placeholder.com/420x260.png?text=Shampoo+Product" alt="Shampoo product showcase" style="max-width:100%; height:auto;">
+      </div>
+    </section>
+
+    <section id="shop" class="container" aria-label="Product grid">
+      <h2 style="margin:0 0 12px;">Featured Shampoos</h2>
+      <p style="color:var(--muted); margin:0 0 16px;">Find your perfect clean, refreshing shampoo.</p>
+
+      <div class="grid">
+        <!-- Product Card 1 -->
+        <article class="card" aria-label="Product: Nourish & Shine Shampoo">
+          <img src="https://via.placeholder.com/600x400.png?text=Nourish+%26+Shine+Shampoo" alt="Nourish & Shine Shampoo">
+          <div class="card-body">
+            <span class="tag">New</span>
+            <h3 style="margin:0; font-size:1.1rem;">Nourish & Shine Shampoo</h3>
+            <p style="margin:0; color:var(--muted); font-size:14px;">Hydrating formula with natural oils for glossy hair.</p>
+            <div style="display:flex; justify-content: space-between; align-items: center;">
+              <span class="price">$12.99</span>
+              <button class="btn" aria-label="Add Nourish & Shine Shampoo to cart">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product Card 2 -->
+        <article class="card" aria-label="Product: Refresh Mint Shampoo">
+          <img src="https://via.placeholder.com/600x400.png?text=Refresh+Mint+Shampoo" alt="Refresh Mint Shampoo">
+          <div class="card-body">
+            <span class="tag" style="background:#e6f4ea; color:#165b34;">Best Seller</span>
+            <h3 style="margin:0; font-size:1.1rem;">Refresh Mint Shampoo</h3>
+            <p style="margin:0; color:var(--muted); font-size:14px;">Invigorating mint to awaken your scalp.</p>
+            <div style="display:flex; justify-content: space-between; align-items: center;">
+              <span class="price">$11.49</span>
+              <button class="btn" aria-label="Add Refresh Mint Shampoo to cart">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product Card 3 -->
+        <article class="card" aria-label="Product: Keratin Repair Shampoo">
+          <img src="https://via.placeholder.com/600x400.png?text=Keratin+Repair+Shampoo" alt="Keratin Repair Shampoo">
+          <div class="card-body">
+            <span class="tag" style="background:#eef2ff; color:#3730a3;">Keratin</span>
+            <h3 style="margin:0; font-size:1.1rem;">Keratin Repair Shampoo</h3>
+            <p style="margin:0; color:var(--muted); font-size:14px;">Strengthens damaged hair with keratin complex.</p>
+            <div style="display:flex; justify-content: space-between; align-items: center;">
+              <span class="price">$15.99</span>
+              <button class="btn" aria-label="Add Keratin Repair Shampoo to cart">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product Card 4 -->
+        <article class="card" aria-label="Product: Volumize & Shine Shampoo">
+          <img src="https://via.placeholder.com/600x400.png?text=Volumize+%26+Shine+Shampoo" alt="Volumize & Shine Shampoo">
+          <div class="card-body">
+            <span class="tag" style="background:#fff3e0; color:#9a6315;">Volume</span>
+            <h3 style="margin:0; font-size:1.1rem;">Volumize & Shine Shampoo</h3>
+            <p style="margin:0; color:var(--muted); font-size:14px;">Lightweight formula for bigger, bouncier hair.</p>
+            <div style="display:flex; justify-content: space-between; align-items: center;">
+              <span class="price">$10.99</span>
+              <button class="btn" aria-label="Add Volumize & Shine Shampoo to cart">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="about" class="container" aria-label="About section" style="padding-bottom: 20px;">
+      <h2>Our Philosophy</h2>
+      <p style="color:var(--muted); max-width: 700px;">
+        At Beauty & Shine, we curate gentle, effective beauty products made with clean ingredients. Our shampoos are crafted to support healthy hair and a healthy scalp, without compromising on performance.
+      </p>
+    </section>
+  </main>
+
+  <footer id="contact" aria-label="Footer">
+    <div class="container" style="display:flex; flex-wrap:wrap; gap:20px; align-items:center; justify-content:space-between;">
+      <div>&copy; 2026 Beauty & Shine. All rights reserved.</div>
+      <div style="display:flex; gap:10px;">
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="Facebook">Facebook</a>
+        <a href="#" aria-label="Email">Email</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
